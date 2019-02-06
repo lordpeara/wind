@@ -6,18 +6,6 @@ import unittest
 from wind.datastructures import FlexibleDeque, CaseInsensitiveDict
 
 
-class StreamTestCase(unittest.TestCase):
-    """Tests for modules in wind.stream"""
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
-    def test_socket_read_bytes(self):
-        pass
-
-
 class DatastructuresTestCase(unittest.TestCase):
     def setUp(self):
         pass
@@ -59,7 +47,3 @@ class DatastructuresTestCase(unittest.TestCase):
 
         v = dict_.get('CLub')
         assert v == 'octagon'
-
-
-if __name__ == '__main__':
-    unittest.main()
