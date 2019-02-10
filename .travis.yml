@@ -15,7 +15,7 @@ install:
 script:
   - "python -m coverage run -m unittest discover tests \"*_test.py\""
   - "python -m coverage xml"
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then && python -m flake8 wind; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then python -m flake8 wind; fi
 
 after_success:
   - "codecov"
