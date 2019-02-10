@@ -166,8 +166,6 @@ class PollReactor(object):
     def stop(self):
         self._running = False
 
-Reactor = PollReactor
-
 
 class Heartbeat(object):
     """Heartbeat for reactor.
@@ -254,3 +252,6 @@ class Heartbeat(object):
         self._sock.close()
         self._writer.close()
         self._reader.close()
+
+
+Reactor = PollReactor

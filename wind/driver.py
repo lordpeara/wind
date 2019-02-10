@@ -72,13 +72,13 @@ class BaseDriver(object):
         pass
 
     def register(self, fd, event_mask):
-        raise NotImplemented("Should implement `register` method")
+        raise NotImplementedError("Should implement `register` method")
 
     def unregister(self, fd):
-        raise NotImplemented("Should implement `unregister` method")
+        raise NotImplementedError("Should implement `unregister` method")
 
     def poll(self, poll_timeout):
-        raise NotImplemented("Should implement `poll` method")
+        raise NotImplementedError("Should implement `poll` method")
 
     @property
     def instance(self):
