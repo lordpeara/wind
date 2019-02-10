@@ -10,7 +10,7 @@
 import socket
 from wind.reactor import Reactor
 from wind.driver import PollEvents
-from wind.compat import basestring
+from wind.compat import basestring, file_type
 from wind.datastructures import FlexibleDeque
 from wind.exceptions import StreamError, EWOULDBLOCK, ECONNRESET
 
@@ -467,7 +467,7 @@ class SocketStream(BaseStream):
 
 class FileStream(BaseStream):
     def __init__(self, file_, *args, **kwargs):
-        if not isinstance(file_, file):
+        if not isinstance(file_, file_type):
             raise StreamError(
                 'FileStream can only be initialized with `file`')
         self.file_ = file_

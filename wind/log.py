@@ -152,4 +152,5 @@ class BaseLogger(object):
     def _log_method(self, logger, log_level):
         return getattr(logger, log_level.method)
 
+
 wind_logger = BaseLogger()

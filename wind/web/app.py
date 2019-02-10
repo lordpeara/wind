@@ -270,7 +270,7 @@ class Resource(object):
             else:
                 # XXX: Grab this.
                 pass
-        except Exception as e:
+        except Exception:
             wind_logger.log(traceback.format_exc(), LogType.ACCESS)
             self.send_response(
                 status_code=HTTPStatusCode.INTERNAL_SERVER_ERROR)
